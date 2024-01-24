@@ -9,6 +9,6 @@ spring:
   datasource:
     url: ${JDBC_URL_ASQUALA:jdbc:postgresql://localhost:5432/fairflow}
     username: ${PGSQL_USER_NAME:postgres}
-    password: ${PGSQL_PASSWORD:123}
+    password: ${PGSQL_PASSWORD:BigBeans}
 
 

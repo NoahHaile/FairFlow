@@ -19,7 +19,11 @@ public class BeneficiaryService {
         return List.of();
     }
 
-    public Optional<Beneficiary> updateBeneficiary(BeneficiaryDto beneficiaryDto){
+    public Optional<Beneficiary> updateBeneficiary(Long beneficiaryId, BeneficiaryDto beneficiaryDto){
+        return Optional.empty();
+    }
+
+    public Optional<List<Beneficiary>> getAllBeneficiaries() {
         return Optional.empty();
     }
 }
