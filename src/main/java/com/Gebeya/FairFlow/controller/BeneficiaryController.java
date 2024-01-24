@@ -17,14 +17,14 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v1/beneficiary")
 @RequiredArgsConstructor
-@Tag(name = "My API", description = "Operations pertaining to My API")
+@Tag(name = "beneficiary", description = "")
 public class BeneficiaryController {
     private final BeneficiaryService beneficiaryService;
     @PostMapping("/create")
-    @Operation(summary = "Get Example", description = "Get an example resource")
+    @Operation(summary = "create beneficiary", description = "agent add beneficiary")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful operation"),
-            @ApiResponse(responseCode = "404", description = "Resource not found")
+            @ApiResponse(responseCode = "200", description = "Successfully add beneficiary"),
+            @ApiResponse(responseCode = "404", description = "Beneficiary is not valid")
     })
     public ResponseEntity<Optional<Beneficiary>> agentAddBeneficiary(@RequestBody BeneficiaryDto beneficiary) {
         return ResponseEntity.ok(beneficiaryService.createBeneficiary(beneficiary));
