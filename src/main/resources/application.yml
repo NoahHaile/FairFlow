@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: ${JDBC_URL_ASQUALA:jdbc:postgresql://localhost:5432/fairflow}
+    username: ${PGSQL_USER_NAME:postgres}
+    password: ${PGSQL_PASSWORD:123}
+
+
